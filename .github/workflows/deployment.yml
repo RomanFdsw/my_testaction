@@ -18,6 +18,9 @@ jobs:
             - name: Run tests
               run: npm test
     deploy:
+      defaults:
+        run:
+          working-directory: ./second-action      
       runs-on: ubuntu-latest
       steps:
          - name: Get code
